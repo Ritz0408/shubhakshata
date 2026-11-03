@@ -17,7 +17,7 @@ const CONFIG = {
     order:
       'Namaskar Shubhakshata!\nI would like to order personalized akshata sachets.\n\n' +
       'Pack: {pack} sachets ({price})\nDesign: {design}\n\n' +
-      'Bride & groom names:\nWedding date:\nSticker language (Marathi/English):',
+      'Bride & groom names:\nWedding date:\nSticker language (Marathi/English):\nWith or without akshata:',
     general: 'Namaskar Shubhakshata!\nI would like to know more about your personalized akshata sachets.',
   },
 };

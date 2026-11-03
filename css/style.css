@@ -327,10 +327,52 @@ ul { padding: 0; list-style: none; }
 
 .product-info .btn-lg { margin-top: 8px; }
 .order-note { margin-top: 10px; font-size: .86rem; color: var(--ink-soft); }
+.order-note [lang="mr"] { display: block; margin-top: 2px; font-family: var(--font-mr); color: var(--red-600); }
 
 .product-details { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--ivory-300); color: var(--ink-soft); }
-.feature-list { display: grid; gap: 10px; margin-top: 16px; }
+.product-details > p { margin-bottom: 14px; }
+
+/* Fold-out info panels: Features / Delivery / Good to know */
+.info { border-top: 1px solid var(--ivory-300); }
+.info:last-child { border-bottom: 1px solid var(--ivory-300); }
+.info summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  list-style: none;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--maroon-800);
+  cursor: pointer;
+}
+.info summary::-webkit-details-marker { display: none; }
+.info summary::after {
+  content: "+";
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--gold-700);
+  transition: transform .3s var(--ease);
+}
+.info[open] summary::after { transform: rotate(45deg); }
+.info summary:hover { color: var(--red-600); }
+.info > ul { padding-bottom: 18px; }
+.info[open] > ul { animation: rise .4s var(--ease); }
+
+.info-list { display: grid; gap: 10px; }
+.info-list li { position: relative; padding-left: 18px; font-size: .95rem; }
+.info-list li::before { content: ""; position: absolute; left: 2px; top: .72em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-500); }
+.info-list strong { font-weight: 600; color: var(--ink); }
+.info-list a { color: var(--red-600); font-weight: 500; }
+
+.feature-list { display: grid; gap: 10px; }
 .feature-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--ink); }
+.feature-list strong { color: var(--maroon-900); }
 .feature-list .icon {
   width: 22px;
   height: 22px;
